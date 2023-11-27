@@ -28,12 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            pictureBox_sun = new PictureBox();
+            timer = new System.Windows.Forms.Timer(components);
+            pictureBox_mercury = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_sun).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_mercury).BeginInit();
+            SuspendLayout();
+            // 
+            // pictureBox_sun
+            // 
+            pictureBox_sun.Anchor = AnchorStyles.None;
+            pictureBox_sun.Image = (Image)resources.GetObject("pictureBox_sun.Image");
+            pictureBox_sun.Location = new Point(650, 650);
+            pictureBox_sun.Name = "pictureBox_sun";
+            pictureBox_sun.Size = new Size(200, 200);
+            pictureBox_sun.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_sun.TabIndex = 0;
+            pictureBox_sun.TabStop = false;
+            pictureBox_sun.Click += pictureBox1_Click;
+            // 
+            // timer
+            // 
+            timer.Interval = 1000;
+            timer.Tick += timer_Tick;
+            // 
+            // pictureBox_mercury
+            // 
+            pictureBox_mercury.Anchor = AnchorStyles.None;
+            pictureBox_mercury.Image = (Image)resources.GetObject("pictureBox_mercury.Image");
+            pictureBox_mercury.Location = new Point(850, 650);
+            pictureBox_mercury.Margin = new Padding(0);
+            pictureBox_mercury.Name = "pictureBox_mercury";
+            pictureBox_mercury.Size = new Size(200, 200);
+            pictureBox_mercury.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_mercury.TabIndex = 1;
+            pictureBox_mercury.TabStop = false;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(17F, 41F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaptionText;
+            ClientSize = new Size(1468, 1412);
+            Controls.Add(pictureBox_mercury);
+            Controls.Add(pictureBox_sun);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox_sun).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_mercury).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox pictureBox_sun;
+        private System.Windows.Forms.Timer timer;
+        private PictureBox pictureBox_mercury;
     }
 }
