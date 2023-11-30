@@ -99,6 +99,7 @@
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1468, 1412);
             Controls.Add(pictureBox_earth);
             Controls.Add(pictureBox_venus);
